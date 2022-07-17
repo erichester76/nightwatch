@@ -9,7 +9,7 @@ def handle_arp_packet(packet):
 
     # Match ARP requests
     if packet[ARP].op == 1:
-        print(packet[Ether].src, "looking for", packet[ARP].psrc)
+        print(packet[Ether].src, " / ", packet[ARP].psrc, " ",packet[ARP].pdst)
 
     # Match ARP replies
     if packet[ARP].op == 2:
