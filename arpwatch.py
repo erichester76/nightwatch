@@ -23,4 +23,4 @@ def handle_arp_packet(packet):
     return
 
 if __name__ == "__main__":
-    sniff(filter="arp", iface='en1', prn=handle_arp_packet)
+    sniff(filter="arp", prn=handle_arp_packet)
