@@ -9,7 +9,6 @@ def handle_arp_packet(packet):
 
     # Match ARP requests
     if packet[ARP].op == 1:
-        print('New ARP Request')
         print(packet[Ether].src, "looking for", packet[ARP].psrc)
 
     # Match ARP replies
